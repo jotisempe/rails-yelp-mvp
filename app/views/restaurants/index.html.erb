@@ -1,0 +1,8 @@
+<h1>Restaurant list:</h1>
+
+<!-- Iterate over the instances (@restaurants), sent from the controller -->
+<% @restaurants.each do |restaurant| %>
+  <p><%= link_to restaurant.name, restaurant_path(restaurant.id)  %></p>
+<% end %>
+
+<p><%= link_to 'Add New', new_restaurant_path, class: "btn btn-success" %></p>
